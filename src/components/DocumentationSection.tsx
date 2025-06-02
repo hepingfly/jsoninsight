@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, BookOpen, Download, Eye, Loader2, AlertCircle, Sparkles } from 'lucide-react';
+import { Copy, BookOpen, Loader2, AlertCircle, Sparkles } from 'lucide-react';
 import { useAI } from '@/context/AIContext';
 
 interface DocumentField {
@@ -380,4 +380,4 @@ ${data.summary || ''}
       </div>
     </div>
   );
-} 
+}

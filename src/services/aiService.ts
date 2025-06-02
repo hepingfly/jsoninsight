@@ -90,7 +90,7 @@ class AIService {
       let parsedJson;
       try {
         parsedJson = JSON.parse(jsonInput);
-      } catch (error) {
+      } catch {
         throw new Error('输入的JSON格式不正确');
       }
 

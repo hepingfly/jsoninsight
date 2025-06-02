@@ -36,7 +36,7 @@ export function useAIResponse(): UseAIResponseResult {
     // 验证 JSON 格式
     try {
       JSON.parse(jsonInput);
-    } catch (e) {
+    } catch {
       setError('JSON 格式不正确，请检查后重试');
       return;
     }

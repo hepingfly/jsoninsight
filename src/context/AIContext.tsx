@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, ReactNode } from 'react';
-import { useAIResponse, AIResponseData, UseAIResponseResult } from '@/hooks/useAIResponse';
+import { useAIResponse, UseAIResponseResult } from '@/hooks/useAIResponse';
 
 interface AIContextType extends UseAIResponseResult {}
 
