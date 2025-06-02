@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FileText, Lightbulb, Code, BookOpen, Copy, Play, RotateCcw, Trash2, Github, HelpCircle, Sparkles, Info } from 'lucide-react';
+import { FileText, Lightbulb, Code, BookOpen, Copy, Github, HelpCircle, Sparkles, Info } from 'lucide-react';
 import { AIProvider } from '@/context/AIContext';
 import JsonInputSection from '@/components/JsonInputSection';
 import FieldExplanationSection from '@/components/FieldExplanationSection';
@@ -37,7 +37,7 @@ export default function Home() {
     try {
       const parsed = JSON.parse(input);
       return JSON.stringify(parsed, null, 2);
-    } catch (error) {
+    } catch {
       return <span className="text-red-500">JSON 格式错误，请检查输入</span>;
     }
   };
@@ -66,8 +66,8 @@ export default function Home() {
         setCopySuccess(true);
         setTimeout(() => setCopySuccess(false), 2000);
       }
-    } catch (error) {
-      console.error('复制失败:', error);
+    } catch {
+      console.error('复制失败');
     }
   };
 
