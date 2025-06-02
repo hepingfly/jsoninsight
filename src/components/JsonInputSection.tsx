@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Play, RotateCcw, Trash2, FileText, AlertCircle, Sparkles, Zap, Clock } from 'lucide-react';
+import { RotateCcw, Trash2, FileText, AlertCircle, Sparkles, Zap, Clock } from 'lucide-react';
 import { useAI } from '@/context/AIContext';
 
 interface JsonInputSectionProps {
@@ -52,7 +52,7 @@ export default function JsonInputSection({
     if (value.trim()) {
       try {
         JSON.parse(value);
-      } catch (e) {
+      } catch {
         setError('JSON 格式不正确');
       }
     }
@@ -65,7 +65,7 @@ export default function JsonInputSection({
         const formatted = JSON.stringify(parsed, null, 2);
         setJsonInput(formatted);
         setError('');
-      } catch (e) {
+      } catch {
         setError('JSON 格式不正确，无法格式化');
       }
     }
@@ -91,7 +91,7 @@ export default function JsonInputSection({
       JSON.parse(jsonInput);
       setError('');
       await analyzeJson(jsonInput);
-    } catch (e) {
+    } catch{
       setError('JSON 格式不正确，请检查后重试');
     }
   };
