@@ -3,7 +3,7 @@ import { performance } from 'perf_hooks';
 
 const openai = new OpenAI({
   baseURL: 'https://openrouter.ai/api/v1',
-  apiKey: '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', // 建议用 .env 管理
+  apiKey: '', // 建议用 .env 管理
   defaultHeaders: {
     'HTTP-Referer': 'https://your-site.com', // 可选
     'X-Title': 'YourAppName', // 可选
